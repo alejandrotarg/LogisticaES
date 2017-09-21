@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LlamadosDataSet" targetNamespace="http://tempuri.org/LlamadosDataSet.xsd" xmlns:mstns="http://tempuri.org/LlamadosDataSet.xsd" xmlns="http://tempuri.org/LlamadosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="LogisticaESContext" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LogisticaESContext (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.LogisticaESContext.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_LlamadosTableAdapter" GeneratorDataComponentClassName="v_LlamadosTableAdapter" Name="v_Llamados" UserDataComponentName="v_LlamadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LogisticaESContext (Web.config)" DbObjectName="LogisticaES.dbo.v_Llamados" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LlamadoId, NroLlamado, FechaRegistro, Comentarios, MotivoId, MotivoNombre, GeneraDonacion, DonacionId, ResultadoId, ResultadoNombre, PublicidadId, PublicidadNombre, UserId, UserName, UserNomApe, Supervisor_UserId, Expr1 FROM dbo.v_Llamados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LlamadoId" DataSetColumn="LlamadoId" />
+              <Mapping SourceColumn="NroLlamado" DataSetColumn="NroLlamado" />
+              <Mapping SourceColumn="FechaRegistro" DataSetColumn="FechaRegistro" />
+              <Mapping SourceColumn="Comentarios" DataSetColumn="Comentarios" />
+              <Mapping SourceColumn="MotivoId" DataSetColumn="MotivoId" />
+              <Mapping SourceColumn="MotivoNombre" DataSetColumn="MotivoNombre" />
+              <Mapping SourceColumn="GeneraDonacion" DataSetColumn="GeneraDonacion" />
+              <Mapping SourceColumn="DonacionId" DataSetColumn="DonacionId" />
+              <Mapping SourceColumn="ResultadoId" DataSetColumn="ResultadoId" />
+              <Mapping SourceColumn="ResultadoNombre" DataSetColumn="ResultadoNombre" />
+              <Mapping SourceColumn="PublicidadId" DataSetColumn="PublicidadId" />
+              <Mapping SourceColumn="PublicidadNombre" DataSetColumn="PublicidadNombre" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="UserNomApe" DataSetColumn="UserNomApe" />
+              <Mapping SourceColumn="Supervisor_UserId" DataSetColumn="Supervisor_UserId" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LlamadosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LlamadosDataSet" msprop:Generator_UserDSName="LlamadosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Llamados" msprop:Generator_TableClassName="v_LlamadosDataTable" msprop:Generator_TableVarName="tablev_Llamados" msprop:Generator_TablePropName="v_Llamados" msprop:Generator_RowDeletingName="v_LlamadosRowDeleting" msprop:Generator_RowChangingName="v_LlamadosRowChanging" msprop:Generator_RowEvHandlerName="v_LlamadosRowChangeEventHandler" msprop:Generator_RowDeletedName="v_LlamadosRowDeleted" msprop:Generator_UserTableName="v_Llamados" msprop:Generator_RowChangedName="v_LlamadosRowChanged" msprop:Generator_RowEvArgName="v_LlamadosRowChangeEvent" msprop:Generator_RowClassName="v_LlamadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LlamadoId" msprop:Generator_ColumnVarNameInTable="columnLlamadoId" msprop:Generator_ColumnPropNameInRow="LlamadoId" msprop:Generator_ColumnPropNameInTable="LlamadoIdColumn" msprop:Generator_UserColumnName="LlamadoId" type="xs:int" />
+              <xs:element name="NroLlamado" msprop:Generator_ColumnVarNameInTable="columnNroLlamado" msprop:Generator_ColumnPropNameInRow="NroLlamado" msprop:Generator_ColumnPropNameInTable="NroLlamadoColumn" msprop:Generator_UserColumnName="NroLlamado" type="xs:int" />
+              <xs:element name="FechaRegistro" msprop:Generator_ColumnVarNameInTable="columnFechaRegistro" msprop:Generator_ColumnPropNameInRow="FechaRegistro" msprop:Generator_ColumnPropNameInTable="FechaRegistroColumn" msprop:Generator_UserColumnName="FechaRegistro" type="xs:dateTime" />
+              <xs:element name="Comentarios" msprop:Generator_ColumnVarNameInTable="columnComentarios" msprop:Generator_ColumnPropNameInRow="Comentarios" msprop:Generator_ColumnPropNameInTable="ComentariosColumn" msprop:Generator_UserColumnName="Comentarios" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MotivoId" msprop:Generator_ColumnVarNameInTable="columnMotivoId" msprop:Generator_ColumnPropNameInRow="MotivoId" msprop:Generator_ColumnPropNameInTable="MotivoIdColumn" msprop:Generator_UserColumnName="MotivoId" type="xs:int" minOccurs="0" />
+              <xs:element name="MotivoNombre" msprop:Generator_ColumnVarNameInTable="columnMotivoNombre" msprop:Generator_ColumnPropNameInRow="MotivoNombre" msprop:Generator_ColumnPropNameInTable="MotivoNombreColumn" msprop:Generator_UserColumnName="MotivoNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GeneraDonacion" msprop:Generator_ColumnVarNameInTable="columnGeneraDonacion" msprop:Generator_ColumnPropNameInRow="GeneraDonacion" msprop:Generator_ColumnPropNameInTable="GeneraDonacionColumn" msprop:Generator_UserColumnName="GeneraDonacion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DonacionId" msprop:Generator_ColumnVarNameInTable="columnDonacionId" msprop:Generator_ColumnPropNameInRow="DonacionId" msprop:Generator_ColumnPropNameInTable="DonacionIdColumn" msprop:Generator_UserColumnName="DonacionId" type="xs:int" minOccurs="0" />
+              <xs:element name="ResultadoId" msprop:Generator_ColumnVarNameInTable="columnResultadoId" msprop:Generator_ColumnPropNameInRow="ResultadoId" msprop:Generator_ColumnPropNameInTable="ResultadoIdColumn" msprop:Generator_UserColumnName="ResultadoId" type="xs:int" minOccurs="0" />
+              <xs:element name="ResultadoNombre" msprop:Generator_ColumnVarNameInTable="columnResultadoNombre" msprop:Generator_ColumnPropNameInRow="ResultadoNombre" msprop:Generator_ColumnPropNameInTable="ResultadoNombreColumn" msprop:Generator_UserColumnName="ResultadoNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PublicidadId" msprop:Generator_ColumnVarNameInTable="columnPublicidadId" msprop:Generator_ColumnPropNameInRow="PublicidadId" msprop:Generator_ColumnPropNameInTable="PublicidadIdColumn" msprop:Generator_UserColumnName="PublicidadId" type="xs:int" minOccurs="0" />
+              <xs:element name="PublicidadNombre" msprop:Generator_ColumnVarNameInTable="columnPublicidadNombre" msprop:Generator_ColumnPropNameInRow="PublicidadNombre" msprop:Generator_ColumnPropNameInTable="PublicidadNombreColumn" msprop:Generator_UserColumnName="PublicidadNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:int" minOccurs="0" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="56" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserNomApe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUserNomApe" msprop:Generator_ColumnPropNameInRow="UserNomApe" msprop:Generator_ColumnPropNameInTable="UserNomApeColumn" msprop:Generator_UserColumnName="UserNomApe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supervisor_UserId" msprop:Generator_ColumnVarNameInTable="columnSupervisor_UserId" msprop:Generator_ColumnPropNameInRow="Supervisor_UserId" msprop:Generator_ColumnPropNameInTable="Supervisor_UserIdColumn" msprop:Generator_UserColumnName="Supervisor_UserId" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:v_Llamados" />
+      <xs:field xpath="mstns:LlamadoId" />
+      <xs:field xpath="mstns:MotivoId" />
+      <xs:field xpath="mstns:DonacionId" />
+      <xs:field xpath="mstns:ResultadoId" />
+      <xs:field xpath="mstns:PublicidadId" />
+      <xs:field xpath="mstns:UserId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

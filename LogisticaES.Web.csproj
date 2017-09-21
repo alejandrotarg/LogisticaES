@@ -1,0 +1,1027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{159858C6-66FE-4B30-BCAF-54010DCD2639}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogisticaES.Web</RootNamespace>
+    <AssemblyName>LogisticaES.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.0.13117\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.0.13117\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.0.13117\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.0.13117\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.0.13117\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.0.13117\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.3.4.6.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\packages\FluentValidation.MVC4.3.4.6.0\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\assemblies\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcCheckBoxList">
+      <HintPath>..\packages\MvcCheckBoxList.1.4.4.3-beta2\lib\net40\MvcCheckBoxList.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Constant.cs" />
+    <Compile Include="Application\Security.cs" />
+    <Compile Include="Application\Utilities.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BarrioController.cs" />
+    <Compile Include="Controllers\CalendarioController.cs" />
+    <Compile Include="Controllers\CamionController.cs" />
+    <Compile Include="Controllers\CampaniaController.cs" />
+    <Compile Include="Controllers\DonacionController.cs" />
+    <Compile Include="Controllers\DonanteController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngresoMailsController.cs" />
+    <Compile Include="Controllers\PanelControlController.cs" />
+    <Compile Include="DataAccess\DataSets\TalonarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TalonarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CampaniaViewController.cs" />
+    <Compile Include="ViewModels\IngresoMailsViewModel.cs" />
+    <Compile Include="Controllers\LlamadoController.cs" />
+    <Compile Include="Controllers\LocalidadController.cs" />
+    <Compile Include="Controllers\MotivoController.cs" />
+    <Compile Include="Controllers\ProvinciaController.cs" />
+    <Compile Include="Controllers\PublicidadController.cs" />
+    <Compile Include="Controllers\ResultadoController.cs" />
+    <Compile Include="Controllers\SysConfigController.cs" />
+    <Compile Include="Controllers\TiendaController.cs" />
+    <Compile Include="Controllers\TipoEdificioController.cs" />
+    <Compile Include="Controllers\TurnoController.cs" />
+    <Compile Include="Controllers\UserProfileController.cs" />
+    <Compile Include="Controllers\ZonaController.cs" />
+    <Compile Include="DataAccess\Helpers.cs" />
+    <Compile Include="DataAccess\Mappings\EntityTypeConfig.cs" />
+    <Compile Include="DataAccess\Mappings\LogisticaESContext.cs" />
+    <Compile Include="DataAccess\SeedData.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LlamadosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LlamadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CamionModel.cs" />
+    <Compile Include="Models\ContadorModel.cs" />
+    <Compile Include="Models\SysConfigModel.cs" />
+    <Compile Include="Models\DonacionModel.cs" />
+    <Compile Include="Models\LlamadoModel.cs" />
+    <Compile Include="Models\PublicidadModel.cs" />
+    <Compile Include="Models\TiendaModel.cs" />
+    <Compile Include="Models\RoleGroupModel.cs" />
+    <Compile Include="Models\LocalizacionModels.cs" />
+    <Compile Include="Models\_VistasSQL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\SecurityResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BarrioViewModel.cs" />
+    <Compile Include="ViewModels\CalendarViewModel.cs" />
+    <Compile Include="ViewModels\CamionViewModel.cs" />
+    <Compile Include="ViewModels\DistribucionViewModel.cs" />
+    <Compile Include="ViewModels\DonacionViewModel.cs" />
+    <Compile Include="ViewModels\DonanteViewModel.cs" />
+    <Compile Include="ViewModels\LlamadosViewModel.cs" />
+    <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\SysConfigViewModel.cs" />
+    <Compile Include="ViewModels\LocalidadViewModel.cs" />
+    <Compile Include="ViewModels\PublicidadViewModel.cs" />
+    <Compile Include="ViewModels\TurnoViewModel.cs" />
+    <Compile Include="ViewModels\UserRoleViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PanelControl.css" />
+    <Content Include="Content\Calendario.css" />
+    <Content Include="Content\droppy.css" />
+    <Content Include="Content\buttons.css" />
+    <Content Include="Content\easy-accordion\blue\images\slide-title-active-1.jpg" />
+    <Content Include="Content\easy-accordion\blue\images\slide-title-inactive-1.jpg" />
+    <Content Include="Content\easy-accordion\blue\images\slide.jpg" />
+    <Content Include="Content\easy-accordion\blue\skin.css" />
+    <Content Include="Content\easy-accordion\easyAccordion.css" />
+    <Content Include="Content\easy-accordion\orange\images\slide-title-active-2.jpg" />
+    <Content Include="Content\easy-accordion\orange\images\slide-title-inactive-2.jpg" />
+    <Content Include="Content\easy-accordion\orange\images\slide.jpg" />
+    <Content Include="Content\easy-accordion\orange\skin.css" />
+    <Content Include="Content\easy-accordion\RotR\images\slide-title-active-2.jpg" />
+    <Content Include="Content\easy-accordion\RotR\images\slide-title-inactive-2.jpg" />
+    <Content Include="Content\easy-accordion\RotR\images\slide.jpg" />
+    <Content Include="Content\easy-accordion\RotR\skin.css" />
+    <Content Include="Content\easy-accordion\stitch\images\corners.png" />
+    <Content Include="Content\easy-accordion\stitch\images\slide.png" />
+    <Content Include="Content\easy-accordion\stitch\images\spines.jpg" />
+    <Content Include="Content\easy-accordion\stitch\skin.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <None Include="DataAccess\Scripts\Releases\LogisticaES_v1_001.sql" />
+    <Content Include="DataAccess\Scripts\CreateUser.sql" />
+    <Content Include="DataAccess\Scripts\v_IngresoMails_Pendientes.sql" />
+    <Content Include="DataAccess\Scripts\v_IngresoMails.sql" />
+    <Content Include="DataAccess\Scripts\Releases\LogisticaES_v1_002.sql" />
+    <Content Include="DataAccess\Scripts\Releases\LogisticaES_v1_003.sql" />
+    <Content Include="DataAccess\Scripts\Releases\LogisticaES_v1_004.sql" />
+    <Content Include="DataAccess\Scripts\v_Llamados.sql" />
+    <Content Include="DataAccess\Scripts\v_DisponibilidadCamiones.sql" />
+    <Content Include="DataAccess\Scripts\v_DistribucionCamiones.sql" />
+    <Content Include="DataAccess\Scripts\v_Donantes.sql" />
+    <Content Include="DataAccess\Scripts\sp_Contador.sql" />
+    <Content Include="DataAccess\Scripts\SetupDB.sql" />
+    <Content Include="DataAccess\Scripts\v_Localidades.sql" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\comment.png" />
+    <Content Include="Images\locks-icon.png" />
+    <Content Include="Images\package.png" />
+    <Content Include="Images\share.png" />
+    <Content Include="NOTAS.txt" />
+    <Content Include="Scripts\easy-accordion\jquery.ba-resize.js" />
+    <Content Include="Scripts\easy-accordion\jquery.ba-resize.min.js" />
+    <Content Include="Scripts\easy-accordion\jquery.easyAccordion.js" />
+    <Content Include="Scripts\easy-accordion\utility.js" />
+    <Content Include="Scripts\EditHelpers.js" />
+    <Content Include="Scripts\ES_UIhelpers.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\ESlogo.png" />
+    <Content Include="Scripts\globalize\cultures\globalize.culture.es-AR.js" />
+    <Content Include="Scripts\globalize\globalize.js" />
+    <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery-ui-1.9.1.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Scripts\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Scripts\ui\jquery-ui.custom.js" />
+    <Content Include="Scripts\ui\jquery-ui.js" />
+    <Content Include="Scripts\ui\jquery.droppy.js" />
+    <Content Include="Scripts\ui\jquery.ui.accordion.js" />
+    <Content Include="Scripts\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Scripts\ui\jquery.ui.button.js" />
+    <Content Include="Scripts\ui\jquery.ui.core.js" />
+    <Content Include="Scripts\ui\jquery.ui.datepicker.js" />
+    <Content Include="Scripts\ui\jquery.ui.dialog.js" />
+    <Content Include="Scripts\ui\jquery.ui.draggable.js" />
+    <Content Include="Scripts\ui\jquery.ui.droppable.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect.js" />
+    <Content Include="Scripts\ui\jquery.ui.menu.js" />
+    <Content Include="Scripts\ui\jquery.ui.mouse.js" />
+    <Content Include="Scripts\ui\jquery.ui.position.js" />
+    <Content Include="Scripts\ui\jquery.ui.progressbar.js" />
+    <Content Include="Scripts\ui\jquery.ui.resizable.js" />
+    <Content Include="Scripts\ui\jquery.ui.selectable.js" />
+    <Content Include="Scripts\ui\jquery.ui.slider.js" />
+    <Content Include="Scripts\ui\jquery.ui.sortable.js" />
+    <Content Include="Scripts\ui\jquery.ui.spinner.js" />
+    <Content Include="Scripts\ui\jquery.ui.tabs.js" />
+    <Content Include="Scripts\ui\jquery.ui.tooltip.js" />
+    <Content Include="Scripts\ui\jquery.ui.widget.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="Scripts\ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="Scripts\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="Scripts\ui\minified\scrollsaver.min.js" />
+    <Content Include="Scripts\views\Calendario.js" />
+    <Content Include="Scripts\views\Barrio.js" />
+    <Content Include="Scripts\views\Camion.js" />
+    <Content Include="Scripts\views\Campania.js" />
+    <Content Include="Scripts\views\IngresoMail.js" />
+    <Content Include="Scripts\views\DonanteCreateMap.js" />
+    <Content Include="Scripts\views\Donacion.js" />
+    <Content Include="Scripts\views\Donante.js" />
+    <Content Include="Scripts\views\DonanteEditMap.js" />
+    <Content Include="Scripts\views\Localidades-barrios.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Donacion\MapaDistribucionCamiones.cshtml" />
+    <Content Include="Views\Llamado\Reporte.cshtml" />
+    <Content Include="Views\Shared\_LoginOverridePartial.cshtml" />
+    <Content Include="Views\Calendario\Index.cshtml" />
+    <Content Include="Views\Calendario\_CalendarBody.cshtml" />
+    <None Include="Properties\PublishProfiles\Local_EjercitoSalvacion.pubxml" />
+    <None Include="Properties\PublishProfiles\test.lengasoft.com.pubxml" />
+    <Content Include="Views\Campania\Index.cshtml" />
+    <None Include="Views\Donante\Create.cshtml_claes18_19_2014.bak" />
+    <None Include="Views\Donante\_DonantesList _Claes_18_19_2014.cshtml.bak" />
+    <Content Include="Views\IngresoMails\Create.cshtml" />
+    <Content Include="Views\PanelControl\_CalendarBody.cshtml" />
+    <Content Include="Views\PanelControl\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reportes\Donacion\Distribucion.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Donacion\Talonario.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Llamados\UsuariosMotivo.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Donacion\Talon_interno.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Reportes\Donacion\Talon_donante.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Llamados\PublicidadUsuarios.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Llamados\PublicidadResultado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Llamados\LocalidadBarrio.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\SecurityResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SecurityResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_MenuPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UserProfile\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UserProfile\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UserProfile\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UserProfile\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UserProfile\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tienda\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tienda\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tienda\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tienda\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tienda\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Provincia\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Provincia\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Provincia\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Provincia\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Provincia\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Zona\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Zona\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Zona\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Zona\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Zona\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\_Localidades.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Camion\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Camion\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Camion\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Camion\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Camion\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Publicidad\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Publicidad\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Publicidad\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Publicidad\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Publicidad\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\_LocalidadesList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\_BarriosList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SysConfig\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SysConfig\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Motivo\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Motivo\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Motivo\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Motivo\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Motivo\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Resultado\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Resultado\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Resultado\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Resultado\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Resultado\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turno\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turno\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turno\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turno\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turno\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Llamado\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Llamado\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Llamado\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Llamado\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Llamado\Nuevo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\_FindDonante.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Localidad\_LocalidadesCombo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Barrio\_BarriosCombo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donante\_DonantesList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\NewPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\_DonacionesList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\Distribucion.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\_DistribucionList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Donacion\MapaDistribucion.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SysConfig\Create.cshtml" />
+    <Content Include="Views\Camion\Distribucion.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataAccess\DataSets\TalonarioDataSet.xsc">
+      <DependentUpon>TalonarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataAccess\DataSets\TalonarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>TalonarioDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataAccess\DataSets\TalonarioDataSet.xss">
+      <DependentUpon>TalonarioDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="Views\Llamado\_LlamadosList.cshtml" />
+    <None Include="LlamadosDataSet.xsc">
+      <DependentUpon>LlamadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LlamadosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LlamadosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LlamadosDataSet.xss">
+      <DependentUpon>LlamadosDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="Views\TipoEdificio\Index.cshtml" />
+    <Content Include="Views\TipoEdificio\Details.cshtml" />
+    <Content Include="Views\TipoEdificio\Create.cshtml" />
+    <Content Include="Views\TipoEdificio\Edit.cshtml" />
+    <Content Include="Views\TipoEdificio\Delete.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7383</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7393/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

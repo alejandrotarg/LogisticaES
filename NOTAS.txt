@@ -1,0 +1,15 @@
+﻿Este archivo contiene notas generales a modo de "ayuda memoria" sobre la construcción de la aplicación. Febrero 2013.
+
+- La aplicación está optimizada para una resolución de 1280 x 768. Con una resolución mayor aparece el logo de ES a la izquierda de la pantalla.
+- La página de inicio no muestra el logo de la izquierda (que solo se ve en pantallas con ancho mayor a 1280), ni tampoco el título de encabezado. 
+- El script ES_UIhelpers.js contiene funciones generales de jQuery para distintas páginas.
+- Estilo general del sitio: Site.css
+- Menú: droopy.css, jquery.droppy.js
+- Cuando la aplicación se inicia por primera vez crea un usuario de administración "AdminFactory" con passw. "adminfactory" con el deben crearse el administrador principal y los otros usuarios. AdminFactory tiene como fin tener un acceso de soporte de fábrica y por lo tanto no aparece en el listado de usuarios.
+- AdminFactory solo aparece en el listado de usuarios cuando él mismo está logueado, para poder darse los permisos necesarios para trabajar en mantenimiento. 
+- La hora de registro de llamado se genera cuando el usuario guarda la llamada o la donación.
+- El formato del número de teléfono es configurable mediante expresiones regulares.
+- El formato del número de puerta de la dirección de teléfono es configurable mediante expresiones regulares. Si la expresión es un string vacío, el número de puerta no es exigible.
+- La recuperación de contraseñas de los usuarios pueden hacerla los mismos usuarios a través de su cuenta de mail. Si el usuario no tiene cargada dirección de mail en la cuenta no puede utilizar este procedimiento. El administrador del sistema puede modificar la contraseña del usuario desde la edición de la cuenta del usuario, idependientemente de si este tiene registrada una dirección de correo o no.
+- Cuando se modifica una donación y no se cambia la fecha de retiro, no se genera una nueva entrada en la tabla Retiros, por lo que la cantidad de bultos y camión pueden variar si solo se cambió la cantidad de bultos y/o el camión que retira. Por lo tanto los datos reales de retiro debenser tomados de la tabla Donaciones. Retiros solo es el histórico de modificaciones.
+- Para que ggogle maps encuentra las direcciones de Capital Federal, provincia debe figurar como "Ciudad Autónoma de Buenos Aires" y no como "CABA".
